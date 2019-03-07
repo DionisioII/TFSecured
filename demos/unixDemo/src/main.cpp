@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <opencv2/opencv.hpp>
+
 #include <tensorflow/c/c_api.h>
 
 
@@ -17,7 +18,8 @@ using namespace std;
 int main(int argc, const char * argv[]) {
 
     std::cout << "OpenCV version = " << CV_VERSION << std::endl;
-
     std::cout << "TF version = " << TF_Version() << std::endl;
+    
+    Mat inputImage = cv::imread("res/nine.jpg");
     return 0;
 }
