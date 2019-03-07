@@ -52,7 +52,7 @@ namespace tfsecured {
         
         inline Status decryptAES(const KeyBytes &key_bytes,
                                  std::vector<uint8_t> &input_content,
-                                 const uint32_t content_size) {
+                                 const size_t content_size) {
             
             if (input_content.size() <= AES_INIT_VECTOR_SIZE) {
                 return errors::InvalidArgument("Input encrypted content size = ",

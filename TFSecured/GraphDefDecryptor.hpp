@@ -21,7 +21,7 @@ namespace tfsecured {
     
     typedef std::function<tensorflow::Status(const KeyBytes &key_bytes,
                                              std::vector<uint8_t> &input_content,
-                                             const uint32_t content_size)> Decryptor;
+                                             const size_t content_size)> Decryptor;
     
     
     inline Status GraphDefDecrypt(const std::string &modelPath,
@@ -45,7 +45,7 @@ namespace tfsecured {
             return errors::DataLoss("Can't read file at ", modelPath);
         }
 
-        auto status = decryptor(keyByteArray, bytes, (uint32_t)file.tellg());
+        auto status = decryptor(keyByteArray, bytes, file.tellg());
         if (!status.ok()) {
             return status;
         }
