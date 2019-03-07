@@ -25,14 +25,8 @@
 /* AVFoundation video libraries */
 #define HAVE_AVFOUNDATION
 
-/* V4L capturing support */
-/* #undef HAVE_CAMV4L */
-
 /* V4L2 capturing support */
 /* #undef HAVE_CAMV4L2 */
-
-/* Carbon windowing environment */
-/* #undef HAVE_CARBON */
 
 /* AMD's Basic Linear Algebra Subprograms Library*/
 /* #undef HAVE_CLAMDBLAS */
@@ -44,18 +38,15 @@
 /* #undef HAVE_CLP */
 
 /* Cocoa API */
-#define HAVE_COCOA
+/* #undef HAVE_COCOA */
 
-/* C= */
-/* #undef HAVE_CSTRIPES */
-
-/* NVidia Cuda Basic Linear Algebra Subprograms (BLAS) API*/
+/* NVIDIA CUDA Basic Linear Algebra Subprograms (BLAS) API*/
 /* #undef HAVE_CUBLAS */
 
-/* NVidia Cuda Runtime API*/
+/* NVIDIA CUDA Runtime API*/
 /* #undef HAVE_CUDA */
 
-/* NVidia Cuda Fast Fourier Transform (FFT) API*/
+/* NVIDIA CUDA Fast Fourier Transform (FFT) API*/
 /* #undef HAVE_CUFFT */
 
 /* IEEE1394 capturing support */
@@ -75,7 +66,7 @@
 /* #undef HAVE_DSHOW */
 
 /* Eigen Matrix & Linear Algebra Library */
-#define HAVE_EIGEN
+/* #undef HAVE_EIGEN */
 
 /* FFMpeg video library */
 /* #undef HAVE_FFMPEG */
@@ -95,22 +86,23 @@
 /* Halide support */
 /* #undef HAVE_HALIDE */
 
+/* Vulkan support */
+/* #undef HAVE_VULKAN */
+
 /* Define to 1 if you have the <inttypes.h> header file. */
-#define HAVE_INTTYPES_H 1
+/* #undef HAVE_INTTYPES_H */
 
 /* Intel Perceptual Computing SDK library */
 /* #undef HAVE_INTELPERC */
 
 /* Intel Integrated Performance Primitives */
-#define HAVE_IPP
-#define HAVE_IPP_ICV
-#define HAVE_IPP_IW
-
-/* Intel IPP Async */
-/* #undef HAVE_IPP_A */
+/* #undef HAVE_IPP */
+/* #undef HAVE_IPP_ICV */
+/* #undef HAVE_IPP_IW */
+/* #undef HAVE_IPP_IW_LL */
 
 /* JPEG-2000 codec */
-#define HAVE_JASPER
+/* #undef HAVE_JASPER */
 
 /* IJG JPEG codec */
 #define HAVE_JPEG
@@ -121,25 +113,22 @@
 /* GDCM DICOM codec */
 /* #undef HAVE_GDCM */
 
-/* V4L/V4L2 capturing support via libv4l */
-/* #undef HAVE_LIBV4L */
-
 /* Microsoft Media Foundation Capture library */
 /* #undef HAVE_MSMF */
 
-/* NVidia Video Decoding API*/
+/* NVIDIA Video Decoding API*/
 /* #undef HAVE_NVCUVID */
 
-/* NVidia Video Encoding API*/
+/* NVIDIA Video Encoding API*/
 /* #undef HAVE_NVCUVENC */
 
 /* OpenCL Support */
-#define HAVE_OPENCL
-#define HAVE_OPENCL_STATIC
+/* #undef HAVE_OPENCL */
+/* #undef HAVE_OPENCL_STATIC */
 /* #undef HAVE_OPENCL_SVM */
 
 /* OpenEXR codec */
-#define HAVE_OPENEXR
+/* #undef HAVE_OPENEXR */
 
 /* OpenGL support*/
 /* #undef HAVE_OPENGL */
@@ -149,6 +138,9 @@
 
 /* OpenNI library */
 /* #undef HAVE_OPENNI2 */
+
+/* librealsense library */
+/* #undef HAVE_LIBREALSENSE */
 
 /* PNG codec */
 #define HAVE_PNG
@@ -165,23 +157,14 @@
 /* Qt OpenGL support */
 /* #undef HAVE_QT_OPENGL */
 
-/* QuickTime video libraries */
-/* #undef HAVE_QUICKTIME */
-
-/* QTKit video libraries */
-/* #undef HAVE_QTKIT */
-
 /* Intel Threading Building Blocks */
 /* #undef HAVE_TBB */
 
+/* Ste||ar Group High Performance ParallelX */
+/* #undef HAVE_HPX */
+
 /* TIFF codec */
-#define HAVE_TIFF
-
-/* Unicap video capture library */
-/* #undef HAVE_UNICAP */
-
-/* Video for Windows support */
-/* #undef HAVE_VFW */
+/* #undef HAVE_TIFF */
 
 /* V4L2 capturing support in videoio.h */
 /* #undef HAVE_VIDEOIO */
@@ -212,7 +195,7 @@
 /* #undef HAVE_MFX */
 
 /* Lapack */
-#define HAVE_LAPACK
+/* #undef HAVE_LAPACK */
 
 /* Library was compiled with functions instrumentation */
 /* #undef ENABLE_INSTRUMENTATION */
@@ -222,8 +205,6 @@
 
 #if defined(HAVE_XINE)         || \
     defined(HAVE_GSTREAMER)    || \
-    defined(HAVE_QUICKTIME)    || \
-    defined(HAVE_QTKIT)        || \
     defined(HAVE_AVFOUNDATION) || \
     /*defined(HAVE_OPENNI)     || too specialized */ \
     defined(HAVE_FFMPEG)       || \
@@ -233,8 +214,6 @@
 
 #if /*defined(HAVE_XINE)       || */\
     defined(HAVE_GSTREAMER)    || \
-    defined(HAVE_QUICKTIME)    || \
-    defined(HAVE_QTKIT)        || \
     defined(HAVE_AVFOUNDATION) || \
     defined(HAVE_FFMPEG)       || \
     defined(HAVE_MSMF)
@@ -244,5 +223,7 @@
 /* OpenCV trace utilities */
 #define OPENCV_TRACE
 
+/* Library QR-code decoding */
+#define HAVE_QUIRC
 
 #endif // OPENCV_CVCONFIG_H_INCLUDED
