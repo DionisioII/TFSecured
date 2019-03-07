@@ -13,6 +13,7 @@
 #include <tensorflow/core/framework/op.h>
 #include <tensorflow/core/framework/op_kernel.h>
 #include <tensorflow/core/public/session.h>
+#include <tensorflow/core/public/version.h>
 
 #include <tensorflow/core/framework/shape_inference.h>
 #include <iostream>
@@ -49,6 +50,8 @@ using namespace tensorflow;
 
 
 - (void)loadModelWithKey:(NSString*)key  error:(nullable TFErrorCallback) callback {
+    
+    std::cout << "TF version = " << TF_VERSION_STRING << std::endl;
     
     std::string keyUnhashed([key cStringUsingEncoding:NSUTF8StringEncoding]);
     
