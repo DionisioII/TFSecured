@@ -14,7 +14,9 @@
 using namespace cv;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
+
+    std::cout << "OpenCV version = " << CV_VERSION << std::endl;
+
     std::cout << "TF version = " << TF_Version() << std::endl;
     return 0;
 }
