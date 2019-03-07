@@ -19,7 +19,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "../../../../TFSecured/GraphDefDecryptor.hpp"
+#include "../../../../../TFSecured/GraphDefDecryptor.hpp"
 
 
 using namespace tensorflow;
