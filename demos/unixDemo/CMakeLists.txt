@@ -28,7 +28,7 @@ file(GLOB OPENCV_LIBS ${OPENCV_LIB_DIR}/*.a)
 
 ######## Tensorflow ########
 
-message(STATUS "[+] Using Tensorflow version 1.1.0 ....")
+message(STATUS "[+] Using Tensorflow version 1.2.0 ....")
 
 set(TF_LIB_DIR libs/${PLATFORM_TYPE}/tensorflow)
 
